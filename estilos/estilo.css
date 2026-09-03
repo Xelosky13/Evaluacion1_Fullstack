@@ -1,0 +1,90 @@
+.footer {
+    background-color: #111111;
+    color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.caluga {
+    float: left;
+    width: 25%;
+}
+
+.caluguita {
+    padding: 15px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 8px;
+}
+
+.formulario {
+    margin-top: 15px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #444444;
+    background-color: #222222;
+    color: #ffffff;
+    border-radius: 4px;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #ffffff;
+    color: #111111;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.formulario button:hover {
+    background-color: #cccccc;
+}
+.insta {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+.enlace-contacto:hover {
+    color: #ffffff;
+}
+
+@media screen and (max-width: 800px) {
+    .caluga {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .caluga {
+        width: 100%;
+    }
+}
