@@ -1,6 +1,6 @@
 .contenedor {
-    max-width: 1100px;/* Ancho maximo de la pagina */
-    margin: 0 auto;/* Centra todo en el medio de la pantalla */
+    max-width: auto;/* Ancho maximo de la pagina */
+    margin:  auto;/* Centra todo en el medio de la pantalla */
     padding: 20px;
     flex-wrap: wrap;
 }
@@ -8,27 +8,31 @@
 .catalogo{
     display: flex;/* Alinea los cuadros uno al lado del otro */
     justify-content: center;/* Centra los cuadros horizontalmente */
-    gap: 20px;/* Espacio de separacion entre cuadros */
-    margin-bottom: 30px;/* Separación con la parte de abajo */
+    gap: 10px;/* Espacio de separacion entre cuadros */
+    margin-bottom: 10px;/* Separación con la parte de abajo */
     flex-wrap: wrap;/* Si la pantalla es pequena, pasa las tarjetas abajo */  
 }
 
 .poloblue,.pologreen,.poloblack,.polored,.bigpony,.libre {
-    border: #000 solid;        /* Dibuja la línea recta de borde negro alrededor del cuadro */
-    border-radius: 12px;       /* Redondea las 4 esquinas del cuadro */
-    width: clamp(12.5rem, 8.775rem + 15.686vw, 22.5rem);   /* Ajusta el ancho para que cambie según el tamaño de la pantalla */
-    height: clamp(12.5rem, 8.775rem + 15.686vw, 22.5rem);  /* Ajusta el alto para que mantenga el mismo tamaño que el ancho */
-    display: flex;             /* Activa el modo para ordenar lo que hay dentro del cuadro */
-    flex-direction: column; /* Pone las cosas una encima de otra, pero al revés (la imagen abajo y el texto arriba) */
-    align-items: center;       /* Centra todo el contenido de izquierda a derecha */
-    justify-content: center;   /* Centra todo el contenido de arriba a abajo */
-    padding-bottom: 15px; /* Le da un espacio respirable abajo del botón */
-    background-color: darkcyan;
+  border: #000 solid;        /* Dibuja la línea recta de borde negro alrededor del cuadro */
+  border-radius: 12px;       /* Redondea las 4 esquinas del cuadro */
+  width: clamp(12.5rem, 8.775rem + 15.686vw, 22.5rem);   /* Ajusta el ancho para que cambie según el tamaño de la pantalla */
+  height: clamp(12.5rem, 8.775rem + 15.686vw, 22.5rem);  /* Ajusta el alto para que mantenga el mismo tamaño que el ancho */
+  display: flex;             /* Activa el modo para ordenar lo que hay dentro del cuadro */
+  flex-direction: column; /* Pone las cosas una encima de otra, pero al revés (la imagen abajo y el texto arriba) */
+  align-items: center;       /* Centra todo el contenido de izquierda a derecha */
+  justify-content: center;   /* Centra todo el contenido de arriba a abajo */
+  padding-bottom: 10px; /* Le da un espacio respirable abajo del botón */
+  background-color: darkcyan;
+  
 }
-
 .imagen-productos{
-    max-width: 140%;      /* Evita que la imagen sea más ancha que la tarjeta */
-    max-height: 130px;   /* Le fija un alto máximo controlado */
+  max-width: 120%;      /* Evita que la imagen sea más ancha que la tarjeta */
+  max-height: 110px;
+}
+.imagen-detalle{
+  max-width: 100px;
+  max-height: 150px;
 }
 .precios {
   color: yellow; /* Texto verde */
@@ -39,14 +43,29 @@
   color: #333;/* Color del texto */
   text-transform: uppercase; /* Convierte el texto a mayusculas */
 }
-button {
+button,.boton-detalle {
+  display: inline-block;
+  width: 200px;
   background-color: #f2f0d8;
+  color: black;
   border: 2px solid #000;
   border-radius: 4px;
   padding: 6px 12px;
+  font-size: 14px;
   font-weight: bold;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
 }
-button:hover {
+button:hover,.boton-detalle:hover {
   background-color:aquamarine; /* Cambia de color suavemente al pasar el mouse */
+}
+.fondo-bergen{
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("/imagenes/fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
