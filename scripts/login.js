@@ -28,6 +28,12 @@ formulario.addEventListener("submit", function(evento) {
     }
 
     if (todoBien == true) {
-        alert("¡Inicio de sesión exitoso!");
+        if(correo == "admin@admin.cl" && password == "admin"){
+            alert("¡Inicio de sesión exitoso como administrador!");
+            window.location.href = "admin.html"
+        } else {
+            alert("¡Inicio de sesión exitoso como cliente!");
+            window.location.href = "catalogo.html";
+        }
     }
 });

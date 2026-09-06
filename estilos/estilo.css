@@ -186,3 +186,61 @@
 @media (max-width: 600px) {
     .caluga { width: 100%; }
 }
+
+.contenedor-admin {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    min-height: 50vh;
+}
+
+.contenedor-admin h1 {
+    color: #0C4550;
+    margin-bottom: 30px;
+}
+
+.resumen-metricas {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tarjeta {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    border-top: 4px solid #0C4550;
+}
+
+.tarjeta h3 {
+    margin-bottom: 10px;
+    color: #333333;
+    font-size: 16px;
+}
+
+.tarjeta p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0C4550;
+    margin: 0;
+}
+
+.tabla-admin {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.tabla-admin th, .tabla-admin td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabla-admin th {
+    background-color: #0C4550;
+    color: #ffffff;
+}
