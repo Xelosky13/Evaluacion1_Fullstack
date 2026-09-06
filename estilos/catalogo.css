@@ -1,38 +1,40 @@
 .contenedor {
-    max-width: auto;/* Ancho maximo de la pagina */
-    margin:  auto;/* Centra todo en el medio de la pantalla */
-    padding: 20px;
-    flex-wrap: wrap;
+  margin:  auto;/* Centra todo en el medio de la pantalla */
+  padding: 20px;
+  flex-wrap: wrap;
 }
-
+.contenedor p {
+  margin: 8px 0; 
+}
 .catalogo{
-    display: flex;/* Alinea los cuadros uno al lado del otro */
-    justify-content: center;/* Centra los cuadros horizontalmente */
-    gap: 10px;/* Espacio de separacion entre cuadros */
-    margin-bottom: 10px;/* Separación con la parte de abajo */
-    flex-wrap: wrap;/* Si la pantalla es pequena, pasa las tarjetas abajo */  
+  display: flex;/* Alinea los cuadros uno al lado del otro */
+  justify-content: center;/* Centra los cuadros horizontalmente */
+  gap: 10px;/* Espacio de separacion entre cuadros */
+  margin-bottom: 10px;/* Separación con la parte de abajo */
+  flex-wrap: wrap;/* Si la pantalla es pequena, pasa las tarjetas abajo */  
+  max-width: 1120px;
 }
 
 .poloblue,.pologreen,.poloblack,.polored,.bigpony,.libre {
   border: #000 solid;        /* Dibuja la línea recta de borde negro alrededor del cuadro */
   border-radius: 12px;       /* Redondea las 4 esquinas del cuadro */
   width: clamp(12.5rem, 8.775rem + 15.686vw, 22.5rem);   /* Ajusta el ancho para que cambie según el tamaño de la pantalla */
-  height: clamp(12.5rem, 8.775rem + 15.686vw, 22.5rem);  /* Ajusta el alto para que mantenga el mismo tamaño que el ancho */
+  min-height: 300px; /* Ajusta el alto para que mantenga el mismo tamaño que el ancho */
   display: flex;             /* Activa el modo para ordenar lo que hay dentro del cuadro */
   flex-direction: column; /* Pone las cosas una encima de otra, pero al revés (la imagen abajo y el texto arriba) */
   align-items: center;       /* Centra todo el contenido de izquierda a derecha */
   justify-content: center;   /* Centra todo el contenido de arriba a abajo */
+  gap: 5px;
   padding-bottom: 10px; /* Le da un espacio respirable abajo del botón */
   background-color: darkcyan;
-  
 }
 .imagen-productos{
-  max-width: 120%;      /* Evita que la imagen sea más ancha que la tarjeta */
+  max-width: 100%; 
   max-height: 110px;
 }
-.imagen-detalle{
-  max-width: 100px;
-  max-height: 150px;
+.imagen-detalle {
+  max-width: 70%;
+  height: auto;
 }
 .precios {
   color: yellow; /* Texto verde */
@@ -45,7 +47,7 @@
 }
 button,.boton-detalle {
   display: inline-block;
-  width: 200px;
+  width: 80%;
   background-color: #f2f0d8;
   color: black;
   border: 2px solid #000;
@@ -68,4 +70,47 @@ button:hover,.boton-detalle:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+#resumen-inventario {
+  width: 320px;          /* O el ancho exacto que prefieras */
+  box-sizing: border-box; /* Asegura que el padding no altere las medidas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: darkcyan;
+  border: #000 solid;
+  border-radius: 12px;
+  padding: 20px; /* Distribuye el contenido internamente */
+}
+#resumen-inventario hr {
+    border: none;
+    border-top: 2px solid #000000;
+    margin: 10px 0 15px 0;
+}
+.detalle-producto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.cuadro-detalle {
+    width: 400px;
+    min-height: 400px;
+    background-color: darkcyan;
+    border: #000 solid;
+    border-radius: 12px;
+    padding: 20px;
+}
+@media (max-width: 600px) {
+
+  .detalle-producto {
+    flex-direction: column;
+  }
+
+  .cuadro-detalle {
+    width: 80%;
+  }
+  .imagen-detalle {
+    width: 90%;
+  }
 }
