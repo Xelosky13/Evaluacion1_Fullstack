@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuarios</title>
-    <link rel="stylesheet" href="/estilos/estiloCrearUser.css">
-    <link rel="stylesheet" href="/estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/estiloCrearUser.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
 </head>
 <body class="pantalla-registro">
     <header class="header" id="header"></header>
@@ -14,7 +14,7 @@
         <form id="formulario-registro" onsubmit="validarRegistro(event)" novalidate>
             <div class="campo">
                 <label class="etiqueta">RUT:</label>
-                <input type="text" id="rut" class="entrada" placeholder="Ej: 12345678k">
+                <input type="text" id="rut" class="entrada" placeholder="Ej: 12345678k" required>
             </div>
             <div class="campo">
                 <label class="etiqueta">Nombre:</label>
@@ -30,11 +30,11 @@
             </div>
             <div class="campo">
                 <label class="etiqueta">Contraseña:</label>
-                <input type="password" id="clave" class="entrada" placeholder="8 caracteres, mayusculas y minuculas" required>
+                <input type="password" id="clave" class="entrada" placeholder="8 caracteres, mayusculas y minusculas" required>
             </div>
             <div class="campo">
                 <label class="etiqueta">Repita Contraseña:</label>
-                <input type="password" id="clave2" class="entrada" placeholder="8 caracteres, mayusculas y minuculas" required>
+                <input type="password" id="clave2" class="entrada" placeholder="8 caracteres, mayusculas y minusculas" required>
             </div>
             <div class="campo">
                 <label class="etiqueta">Direccion:</label>
@@ -44,6 +44,6 @@
         </form>
     </div>
     <footer class="footer" id="footer"></footer>
-    <script src="/scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

@@ -16,20 +16,22 @@ function validarRegistro(event) {
     var clave2 = document.getElementById("clave2").value;
     var direccion = document.getElementById("direccion").value.trim();
 
-    if (run.indexOf(".") !== -1 || run.indexOf("-") !== -1) {
-        alert("Error: El RUN debe ingresarse sin puntos ni guion (Ej: 19011022K).");
+    if (rut.length < 7 || rut.length > 9) {
+        alert("Error: El RUT debe tener entre 7 y 9 caracteres.");
         return false;
     }
-    if (run.length < 7 || run.length > 9) {
-        alert("Error: El RUN debe tener entre 7 y 9 caracteres.");
+
+    if (rut.indexOf(".") !== -1 || rut.indexOf("-") !== -1) {
+        alert("Error: El RUT debe ingresarse sin puntos ni guion (Ej: 19011022K).");
         return false;
     }
-    if (nombre.length > 50 && nombre.length < 2) {
+    
+    if (nombre.length > 50 || nombre.length < 2) {
         alert("Error: El nombre debe tener entre 2 y 50 caracter.");
         return false;
     }
 
-    if (apellidos.length > 100 && apellidos.length < 2) {
+    if (apellidos.length > 100 || apellidos.length < 2) {
         alert("Error: Los apellidos deben tener entre 2 y 100 caracteres");
         return false;
     }
@@ -55,7 +57,8 @@ function validarRegistro(event) {
     }
 
     if (clave.length !== 8 || clave == clave.toLowerCase() || clave == clave.toUpperCase()) {
-        alert("Error: La contraseña debe tener 8 caracteres incluyendo mayusculas y minusculas")
+        alert("Error: La contraseña debe tener 8 caracteres incluyendo mayusculas y minusculas");
+        return false;
     }
 
     if (clave !== clave2) {
