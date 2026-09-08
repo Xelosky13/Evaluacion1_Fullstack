@@ -12,73 +12,72 @@
     <div class="contenedor">
         <div class="catalogo">
                 <!--Producto 1:-->
-                <div class="poloblue">
+                <div class="producto poloblue" data-id="1" data-name="Polo Blue" data-price="1"> <!--Agrege id y datos de clase-->
                     <p><img class="imagen-productos"src="/imagenes/263-Polo-Blue.webp" alt=""></p>
                     <p><strong>PRECIO: </strong><span class="precios"><strong>1 ESMERALDAS</strong></span></p>
                     <p><strong class="titulo-producto">POLO BLUE</strong></p>
-                    <a class="boton-detalle" href="/paginas/detalle_producto.html">DETALLE PRODUCTO</a>
-                    <button onclick="agregarAlCarro('poloblue', 1)">AGREGAR AL CARRO</button>
+                    <a class="boton-detalle" href="/paginas/detalle_producto.html" onclick="guardarDetalle(this)">DETALLE PRODUCTO</a> <!--Guarda el data de la clase-->
+                    <button class="btn-agregar">AGREGAR AL CARRO</button> <!--btn-Agregar data de la clase-->
                 </div>
                 <!--Producto 2:-->
-                <div class="pologreen">
+                <div class="producto pologreen" data-id="2" data-name="Polo Green" data-price="1"> <!--Agrege id y datos de clase-->
                     <p><img class="imagen-productos" src="/imagenes/267-Polo-Green.webp" alt=""></p>
                     <p><strong>PRECIO: </strong><span class="precios"><strong>1 ESMERALDAS</strong></span></p>
                     <p><strong class="titulo-producto">POLO GREEN</strong></p>
-                    <a class="boton-detalle" href="/paginas/detalle_producto.html">DETALLE PRODUCTO</a>
-                    <button onclick="agregarAlCarro('pologreen', 1)">AGREGAR AL CARRO</button>         
+                    <a class="boton-detalle" href="/paginas/detalle_producto.html" onclick="guardarDetalle(this)">DETALLE PRODUCTO</a> <!--Guarda el data de la clase-->
+                    <button class="btn-agregar">AGREGAR AL CARRO</button> <!--btn-Agregar data de la clase-->        
                 </div>
                 <!--Producto 3:-->
-                <div class="poloblack">
+                <div class="producto poloblack" data-id="3" data-name="Polo Green" data-price="1"> <!--Agrege id y datos de clase-->
                     <p><img class="imagen-productos" src="/imagenes/269-Polo-Black.webp" alt=""></p>
                     <p><strong>PRECIO: </strong><span class="precios"><strong>1 ESMERALDAS</strong></span></p>
                     <p><strong class="titulo-producto">POLO BLACK</strong></p>
-                    <a class="boton-detalle" href="/paginas/detalle_producto.html">DETALLE PRODUCTO</a>
-                    <button onclick="agregarAlCarro('poloblack', 1)">AGREGAR AL CARRO</button>
+                    <a class="boton-detalle" href="/paginas/detalle_producto.html" onclick="guardarDetalle(this)">DETALLE PRODUCTO</a> <!--Guarda el data de la clase-->
+                    <button class="btn-agregar">AGREGAR AL CARRO</button> <!--btn-Agregar data de la clase-->
                 </div>
                 <!--Producto 4:-->
-                <div class="polored">
+                <div class="producto polored" data-id="4" data-name="Polo Red" data-price="1"> <!--Agrege id y datos de clase-->
                     <p><img class="imagen-productos" src="/imagenes/272-Polo-Red.webp" alt=""></p>
                     <p><strong>PRECIO: </strong><span class="precios"><strong>1 ESMERALDAS</strong></span></p>
                     <p><strong class="titulo-producto">POLO RED</strong></p>
-                    <a class="boton-detalle" href="/paginas/detalle_producto.html">DETALLE PRODUCTO</a>
-                    <button onclick="agregarAlCarro('polored', 1)">AGREGAR AL CARRO</button>
+                    <a class="boton-detalle" href="/paginas/detalle_producto.html" onclick="guardarDetalle(this)">DETALLE PRODUCTO</a> <!--Guarda el data de la clase-->
+                    <button class="btn-agregar">AGREGAR AL CARRO</button> <!--btn-Agregar data de la clase-->
                 </div>
                 <!--Producto 5:-->
-                <div class="bigpony">
+                <div class="producto bigpony" data-id="5" data-name="Big Pony" data-price="1"> <!--Agrege id y datos de clase-->
                     <p><img class="imagen-productos" src="/imagenes/274-Big-Pony.webp" alt=""></p>
                     <p><strong>PRECIO: </strong><span class="precios"><strong>1 ESMERALDAS</strong></span></p>
                     <p><strong class="titulo-producto">POLO BIG</strong></p>
-                    <a class="boton-detalle" href="/paginas/detalle_producto.html">DETALLE PRODUCTO</a>
-                    <button onclick="agregarAlCarro('bigpony', 1)">AGREGAR AL CARRO</button>
+                    <a class="boton-detalle" href="/paginas/detalle_producto.html" onclick="guardarDetalle(this)">DETALLE PRODUCTO</a> <!--Guarda el data de la clase-->
+                    <button class="btn-agregar">AGREGAR AL CARRO</button> <!--btn-Agregar data de la clase-->
                 </div>
                 <!--Producto 6:-->
-                <div class="libre">
+                <div class="producto libre" data-id="6" data-name="Libre" data-price="1"> 
                     <p><img class="imagen-productos" src="/imagenes/275-Libre.webp" alt=""></p>
                     <p><strong>PRECIO: </strong><span class="precios"><strong>1 ESMERALDAS</strong></span></p>
                     <p><strong class="titulo-producto">LIBRE LXS</strong></p>
-                    <a class="boton-detalle" href="/paginas/detalle_producto.html">DETALLE PRODUCTO</a>
-                    <button onclick="agregarAlCarro('libre', 1)">AGREGAR AL CARRO</button>
+                    <a class="boton-detalle" href="/paginas/detalle_producto.html" onclick="guardarDetalle(this)">DETALLE PRODUCTO</a> 
+                    <button class="btn-agregar">AGREGAR AL CARRO</button> 
                 </div>
                 <div id="resumen-inventario">
                     <h2>Resumen de compra</h2>
-                    <div id="detalle-productos">
-                    <p>Polo Blue: <span id="cant-poloblue">0</span> / 64</p>
-                    <p>Polo Green: <span id="cant-pologreen">0</span> / 64</p>
-                    <p>Polo Black: <span id="cant-poloblack">0</span> / 64</p>
-                    <p>Polo Red: <span id="cant-polored">0</span> / 64</p>
-                    <p>Polo Big: <span id="cant-bigpony">0</span> / 64</p>
-                    <p>Libre LXS: <span id="cant-libre">0</span> / 64</p>
+                    <div id="items-carrito">
+                        <p>El carrito está vacío.</p> <!-- JS inyectará los productos aquí -->
+                    </div>
                     <hr>
                     <p>Total de Ítems: <span id="total-items">0</span></p>
                     <p>Costo Total:<span id="total-esmeraldas">0</span> Esmeraldas</p>
                     <hr>
-                    <a class="boton-pagar" href="/paginas/detalle_producto.html">Pagar</a>
+                    <button id="btn-vaciar" class="boton-pagar">Vaciar Carrito</button>
+                    <a class="boton-pagar" href="#">Pagar</a>
                 </div>
             </div>
         </div>  
     </div>
     <footer class="footer" id="footer"></footer>
     <script src="/scripts/script.js"></script>
-    <script src="/scripts/catalogo.js"> </script>
+    <script src="/scripts/carroCatalogo.js"></script>
+    <!--<script src="/scripts/catalogo.js"> </script>--> <!--Comente el catalogo.js antiguo-->
+    
 </body>
 </html> 
