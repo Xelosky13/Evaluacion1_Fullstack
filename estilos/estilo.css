@@ -439,6 +439,237 @@
     color: #ffffff;
 }
 
+.contenedor-principal { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 70vh; 
+    background-color: #f8f9fa; 
+    padding: 40px 20px; 
+}
+
+.caja-login { 
+    background-color: #ffffff; 
+    padding: 40px; 
+    border-radius: 10px; 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1); 
+    width: 100%; 
+    max-width: 400px; 
+    text-align: center; 
+}
+
+.caja-login h2 { 
+    color: #0C4550; 
+    margin-bottom: 8px; 
+    font-size: 26px; 
+}
+
+.caja-login p { 
+    color: #666; 
+    margin-bottom: 30px; 
+    font-size: 14px; 
+}
+
+.formulario-login { 
+    display: flex; 
+    flex-direction: column; 
+    text-align: left; 
+}
+
+.grupo-input { 
+    margin-bottom: 20px; 
+    display: flex; 
+    flex-direction: column; 
+}
+
+.grupo-input label { 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 8px; 
+    font-size: 14px; 
+}
+
+.grupo-input input { 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    outline: none; 
+}
+
+.grupo-input input:focus { 
+    border-color: #0C4550; 
+    box-shadow: 0 0 0 3px rgba(12, 69, 80, 0.15); 
+}
+
+.mensaje-error { 
+    color: #dc3545; 
+    font-size: 12px; 
+    margin-top: 5px; 
+    display: none; 
+    font-weight: bold; 
+}
+
+.enlace-contacto:hover {
+    color: #ffffff;
+}
+
+.box1 {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.boxi1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 50px auto 0px auto;
+}
+
+.box2{
+    width: 100%;
+    overflow: auto;
+    background-color: rgb(80, 146, 80);
+    margin-top: 5%;
+}
+
+.boxi2 {
+    float: left;
+    width: 16.66%;
+    border-color: #111111;
+    border-radius: 2%;
+}
+
+.boxi3 {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.imagen-producto{
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 15%;
+    border-radius: 5%;
+}
+
+.camioncito {
+    width: 100%;
+    text-align: center;
+}
+
+.imagen-camion {
+    max-width: 10%;
+}
+
+
+@media screen and (max-width: 800px) {
+    .caluga {
+        width: 50%;
+    }
+}            
+.btn-ingresar { 
+    background-color: #0C4550; 
+    color: #ffffff; 
+    padding: 14px; 
+    border: none; 
+    border-radius: 6px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    margin-top: 10px; 
+}
+
+.btn-ingresar:hover { 
+    background-color: #d4af37; 
+}
+
+@media (max-width: 768px) {
+    #header .contenedor { 
+        flex-direction: column; 
+        padding: 15px; 
+        gap: 15px; 
+    }
+
+    .menu { 
+        flex-direction: column; 
+        width: 100%; 
+        gap: 15px; 
+    }
+
+    .menu-izq, .menu-der { 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 10px; 
+    }
+
+    .menu-izq a, .menu-der a { 
+        padding: 8px 12px; 
+        font-size: 14px; 
+    }
+
+    .caluga { 
+        width: 50%; 
+    }
+}
+
+@media (max-width: 600px) {
+    .caluga { width: 100%; }
+}
+
+
+
+.logo img {
+    max-width: 60px;
+    height: auto;
+}
+
+#header {
+    background-color: #0C4550;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .contenedor {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    gap: 30px;
+}
+
+.menu {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-izq, .menu-der {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.menu-izq a, .menu-der a {
+    display: block; 
+    background-color: #ffffff; 
+    color: #0C4550; 
+    padding: 12px 24px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+.menu-izq a:hover, .menu-der a:hover {
+    background-color: #d4af37; 
+    color: #ffffff; 
+}
+
 
 @media(max-width: 768px) {
     #header .contenedor {
