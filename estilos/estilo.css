@@ -21,32 +21,41 @@
 
 #header {
     background-color: #0C4550;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
-#header .contenedor {
+#header .header-contenedor {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
     align-items: center;
-    padding: 10px 0; gap: 30px;
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-right: 30px;
 }
 
 .logo img {
     max-width: 60px;
     height: auto;
+    display: block;
 }
 
 .menu {
     display: flex;
-    flex-grow: 1;
+    flex-direction: row;
     justify-content: space-between;
+    flex-grow: 1;
     align-items: center;
 }
 
 .menu-izq, .menu-der {
-    list-style: none;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    list-style: none;
     margin: 0;
     padding: 0;
     gap: 15px;
