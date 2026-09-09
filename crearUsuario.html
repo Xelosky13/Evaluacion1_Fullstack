@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuarios</title>
+    <link rel="stylesheet" href="estilos/estiloCrearUser.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+<body class="pantalla-registro">
+    <header class="header" id="header"></header>
+    <div class="tabla-registro">
+        <h2 class="titulo">REGISTRATE</h2>
+        <form id="formulario-registro" onsubmit="validarRegistro(event)" novalidate>
+            <div class="campo">
+                <label class="etiqueta">RUT:</label>
+                <input type="text" id="rut" class="entrada" placeholder="Ej: 12345678k" required>
+            </div>
+            <div class="campo">
+                <label class="etiqueta">Nombre:</label>
+                <input type="text" id="nombre" class="entrada" placeholder="Tu nombre" required>
+            </div>
+            <div class="campo">
+                <label class="etiqueta">Apellidos:</label>
+                <input type="text" id="apellidos" class="entrada" placeholder="Tus apellidos" required>
+            </div>
+            <div class="campo">
+                <label class="etiqueta">Email:</label>
+                <input type="email" id="correo" class="entrada" placeholder="nombre@correo.com" required>
+            </div>
+            <div class="campo">
+                <label class="etiqueta">Contraseña:</label>
+                <input type="password" id="clave" class="entrada" placeholder="8 caracteres, mayusculas y minusculas" required>
+            </div>
+            <div class="campo">
+                <label class="etiqueta">Repita Contraseña:</label>
+                <input type="password" id="clave2" class="entrada" placeholder="8 caracteres, mayusculas y minusculas" required>
+            </div>
+            <div class="campo">
+                <label class="etiqueta">Direccion:</label>
+                <input type="text" id="direccion" class="entrada" placeholder="Calle, Numero, Departamento" required>
+            </div>
+            <button type="submit" class="boton-registro">Registrar</button>
+        </form>
+    </div>
+    <footer class="footer" id="footer"></footer>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -6,6 +6,75 @@ function inyectarHeader(){
     document.getElementById("header").innerHTML = '<div class="contenedor"><div class="logo"><a href="/index.html"><img src="../imagenes/LogoPeque.jpg" alt="Logo de la empresa"></a></div><nav class="menu"><ul class="menu-izq"><li><a href="/index.html">Inicio</a></li><li><a href="/paginas/catalogo.html">Catálogo</a></li></ul><ul class="menu-der"><li><a href="/paginas/login.html">Iniciar Sesión</a></li><li><a href="/paginas/carrito.html">Carrito</a></li></ul></nav></div>';
 }
 
+function validarRegistro(event) {
+    event.preventDefault();
+    var rut = document.getElementById("rut").value.trim();
+    var nombre = document.getElementById("nombre").value.trim();
+    var apellidos = document.getElementById("apellidos").value.trim();
+    var correo = document.getElementById("correo").value.trim();
+    var clave = document.getElementById("clave").value;
+    var clave2 = document.getElementById("clave2").value;
+    var direccion = document.getElementById("direccion").value.trim();
+
+    if (rut.length < 7 || rut.length > 9) {
+        alert("Error: El RUT debe tener entre 7 y 9 caracteres.");
+        return false;
+    }
+
+    if (rut.indexOf(".") !== -1 || rut.indexOf("-") !== -1) {
+        alert("Error: El RUT debe ingresarse sin puntos ni guion (Ej: 19011022K).");
+        return false;
+    }
+    
+    if (nombre.length > 50 || nombre.length < 2) {
+        alert("Error: El nombre debe tener entre 2 y 50 caracter.");
+        return false;
+    }
+
+    if (apellidos.length > 100 || apellidos.length < 2) {
+        alert("Error: Los apellidos deben tener entre 2 y 100 caracteres");
+        return false;
+    }
+
+    if (correo.length > 100) {
+        alert("Error: El correo electrónico no puede superar los 100 caracteres.");
+        return false;
+    }
+
+    if (correo.indexOf("@") === -1) {
+    alert("Error: Formato de correo invalido");
+    return false;
+    }
+
+    var dominioValido = false;
+    if (correo.endsWith(".cl") || correo.endsWith(".com")) {
+        dominioValido = true;
+    }
+
+    if (!dominioValido) {
+        alert("Error: Formato de correo invalido");
+        return false;
+    }
+
+    if (clave.length !== 8 || clave == clave.toLowerCase() || clave == clave.toUpperCase()) {
+        alert("Error: La contraseña debe tener 8 caracteres incluyendo mayusculas y minusculas");
+        return false;
+    }
+
+    if (clave !== clave2) {
+    alert("Error: Las contraseñas ingresadas no coinciden.");
+    return false;
+    }
+
+    if (direccion.length > 100) {
+        alert("Error: La dirección no puede superar los 100 caracteres.");
+        return false;
+    }
+
+    alert("¡Usuario registrado con éxito!\n\nBienvenida/o: " + nombre + " " + apellidos);
+    document.getElementById("formulario-registro").reset();
+    return true;
+}
 
 inyectarHeader();
 inyectarFooter();
