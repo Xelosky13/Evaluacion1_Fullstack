@@ -3,7 +3,7 @@ function inyectarFooter(){
 }
 
 function inyectarHeader(){
-    document.getElementById("header").innerHTML = '<div class="header-contenedor"><div class="logo"><a href="/index.html"><img src="/imagenes/LogoPeque.jpg" alt="Logo de la empresa"></a></div><nav class="menu"><ul class="menu-izq"><li><a href="/index.html">Inicio</a></li><li><a href="/paginas/catalogo.html">Catálogo</a></li></ul><ul class="menu-der"><li><a href="/paginas/login.html">Iniciar Sesión</a></li></ul></nav></div>';
+    document.getElementById("header").innerHTML = '<div class="header-contenedor"><div class="logo"><a href="/index.html"><img src="../imagenes/LogoPeque.jpg" alt="Logo de la empresa"></a></div><nav class="menu"><ul class="menu-izq"><li><a href="/index.html">Inicio</a></li><li><a href="../paginas/catalogo.html">Catálogo</a></li></ul><ul class="menu-der"><li><a href="../paginas/login.html">Iniciar Sesión</a></li></ul></nav></div>';
 }
 
 function validarRegistro(event) {
